@@ -1,4 +1,7 @@
+
 /data/*
+/keosd-data/*
+
 
 !/data/.keep
-
+!/keosd-data/.keep

@@ -18,6 +18,12 @@ services:
       # For NTP, requires tzdata and ntp installed on the host
       - /run/dbus/system_bus_socket:/run/dbus/system_bus_socket:ro
 
-volumes:
- nodeos-data-volume:
-   external: true
+
+  keosd:
+    image: eosar/eos:latest
+    command: /opt/eosio/bin/keosd --wallet-dir /opt/eosio/bin/data-dir --http-server-address 0.0.0.0:8888
+    hostname: keosd
+    links:
+      - wallet
+    volumes:
+      - ./keosd-data:/opt/eosio/bin/data-dir
