@@ -1,6 +1,6 @@
 # EOS Wallet
 
-Docker Compose and configuration for running a local EOS node, with http and wallet plugins connected to Aurora's NuSeed.
+Docker Compose and configuration for running a local EOS cli wallet.
 
 
 ## RUN
